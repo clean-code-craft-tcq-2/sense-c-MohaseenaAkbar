@@ -26,7 +26,7 @@ if(setlength !=0)
 }
 else
 {
-    s.average = 0;
+    s.average = NAN;
     s.min = 0;
     s.max = 0;
 }
