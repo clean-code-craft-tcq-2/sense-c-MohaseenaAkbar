@@ -2,16 +2,27 @@
 
 struct Stats compute_statistics(const float* numberset, int setlength) {
     struct Stats s;
-    static int total = 0;
+    int total = 0;
+    int min = numberset[0];
+    int max = numberset[0];
     for(int i=0;i<setlength;i++)
     {
-      total = total + numberset[i];
+         if(numberset[i]<min) 
+         {
+              min= numberset[i];
+         }
+	 if(numberset[i]> max) 
+	 {
+              max= numberset[i];
+	 }
+	total = total + numberset[i];
     }
     s.average = total/setlength;
-    s.min = 0;
-    s.max = 0;
+    s.min = min;
+    s.max = max;
 return s;
 }
+
 
 int emailAlertCallCount = 0;
 int ledAlertCallCount = 0;
