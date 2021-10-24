@@ -15,19 +15,22 @@ return s;
 
 int emailAlertCallCount = 0;
 int ledAlertCallCount = 0;
-int emailAlerter = 0;
-int ledAlerter = 0;
 
 void check_and_alert(float maxThreshold, alerter_funcptr alerters[], struct Stats computedStats)
 {
-	if(computedStats.max > maxThreshold)
-	{	
-		alerters();
-	}
+    if(computedStats.max > maxThreshold)
+    {
+        emailAlerter();
+	ledAlerter();
+    }
 }
 
-void alerters()
+void emailAlerter()
 {
-	emailAlertCallCount++;
-	ledAlertCallCount++;
+    emailAlertCallCount++;
+}
+
+void ledAlerter()
+{
+   ledAlertCallCount++;
 }
