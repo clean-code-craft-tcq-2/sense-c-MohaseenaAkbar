@@ -5,7 +5,7 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
     static int total = 0;
     for(int i=0;i<setlength;i++)
     {
-      total + = numberset[i];
+      total = total + numberset[i];
     }
     s.average = total/setlength;
     s.min = 0;
