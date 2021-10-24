@@ -2,9 +2,9 @@
 
 struct Stats compute_statistics(const float* numberset, int setlength) {
     struct Stats s;
-    int total = 0;
-    int min = numberset[0];
-    int max = numberset[0];
+    float total = 0;
+    float min = numberset[0];
+    float max = numberset[0];
     for(int i=0;i<setlength;i++)
     {
          if(numberset[i]<min) 
