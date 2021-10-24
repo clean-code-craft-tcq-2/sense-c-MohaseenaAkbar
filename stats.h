@@ -1,5 +1,3 @@
-#include <math.h>
-#define NAN = 0.0/0.0;
 struct Stats
 {
    float average;
